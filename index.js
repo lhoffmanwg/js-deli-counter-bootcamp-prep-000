@@ -1,20 +1,24 @@
 
-function takeANumber(katzDeliLine, newPersonName) {
-  katzDeliLine.push(newPersonName);
-  return ("Welcome, " + newPersonName + ". You are number " + katzDeliLine.length + " in line.");
+function takeANumber(katzDeliLine, name) {
+  katzDeliLine.push(name); 
+  return ("Welcome, "+ name + ". You are number " + katzDeliLine.length + " in line.");
 }
-  
+
 function nowServing(katzDeliLine) {
-  var firstInLine;
-  if (katzDeliLine.length === 0){
-    return ("There is nobody waiting to be served!");
-  } else {
-    firstInLine = (katzDeliLine[0]);
-    katzDeliLine.shift();
-    return ("Currently serving " + firstInLine + ".");
+
+  var name;
+  if(katzDeliLine.length === 0) {
+   return ("There is nobody waiting to be served!")
+    
+  }else{
+    name = (katzDeliLine[0]);
+    katzDeliLine.shift()
+    return("Currently serving " + name + ".");
   }
+
 }
-  
+
+
 function currentLine(katzDeliLine) {
   var i;
   if (katzDeliLine.length === 0) {
@@ -30,5 +34,6 @@ function currentLine(katzDeliLine) {
     }
     return lineList;
   }
-} 
+}
+
 
